@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>AlarmService - About</title>
+  {% load static %}
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/small-business.css' %}" rel="stylesheet">
+  <style>
+	.about{
+        border-right:5px solid black;
+        border-left:5px solid black;
+	}
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'main' %}">AlarmService</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'main' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img src="https://i1.sndcdn.com/avatars-000530797560-zky5dg-t500x500.jpg"  height="400" width="600">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1>About</h1>
+        <p style="margin-top:40px;font-size:20px;">개발자 : 이지상</p>
+        <p style="font-size:20px;">개발 기간 : 2022년 4월 15일 ~</p>
+        <p style="font-size:20px;">핵심 기술 : 딥러닝 모델, 영상처리, ajax</p>
+        <p style="font-size:20px;">사용 언어 : html, css, javascript, python</p>
+        <p style="font-size:20px;">프레임워크 : Django
+
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <h1>Project outline</h1>
+    <div style="border: solid;margin-top:40px;font-size:18px">
+    <p>
+      현대화 시대 또 경쟁의 시대에 뒤처지지 않으려면 하루빨리 자신들의 과업을 수행해야 한다. <br>
+        또, 요즘 정보화 시대에는 컴퓨터를 이용하여 일을 하거나 공부를 하는 사람들이 많을 거라고 생각한다.<br>
+        따라서 자신이 정한 기상시간 및 과제 수행기한 등을 맞추기 위해 알림을 설정하고 중지시키는 프로젝트를 구상하였다.<br>
+        특히 마감 기한이 다가왔거나 매우 중요한 일과 프로젝트를 하는데 시간에 쫓겨 밤을 새는 경우도 많고, 여러 일이 동시에 쌓여서 일이 밀렸을 때,
+        졸음이 쏟아져 나오는 상황이 한번쯤은 있었을 것이다. 따라서 알림을 중지할때는 쉽게 버튼하나를 누르는 것이 아닌 컴퓨터나 노트북에 달려있는
+        웹캠 속 사람들의 얼굴을 인식하여 눈동자 깜빡임으로 알람을 중지하게 서비스를 구현하였다. <br>
+        또한 타이머, 투두 리스트 등 알람서비스와 함께 컴퓨터를 하면서 필요한 부가적인 정보를 구현하였다.<br>
+    </p>
+    </div>
+      <!-- /.row -->
+  </div>
+    <!--Call to Action Well # 필요없는 부분이라 일단 지움-->
+
+</body>
+
+</html>

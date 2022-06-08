@@ -1,0 +1,122 @@
+{% load static %}
+<html lang='en'>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+		<title>My Dream Alarm Clock</title>
+		<meta charset='UFT-8' name='viewport' content='width=device-width, initial=scale=1.0' >
+		<link rel="stylesheet" href="{% static 'css/clock2.css' %}">
+          <!-- Bootstrap core CSS -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/small-business.css' %}" rel="stylesheet">
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+		</script>
+
+		<style>
+			.ex{
+			    background-color: white;
+    			box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 20%);
+    			line-height: 1.5rem;
+    			border-radius: 3px;
+    			padding: 1rem;
+    			width: 25%;
+    			border : solid;
+			}
+		</style>
+	</head>
+	<body>
+
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'main' %}">Alarm Service</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'main' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+		  <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div align="center">
+		<div id='main-container'>
+			<h1 id='clock'></h1>
+		</div>
+
+
+			<h3>Set Alarm Time</h3>
+				<label>
+					<div>
+					<select id='alarmhrs' ></select>
+					</div>
+				</label>
+				<label>
+					<div>
+					<select id='alarmmins' ></select>
+					</div>
+				</label>
+				<label>
+					<div>
+					<select id='alarmsecs' ></select>
+					</div>
+				</label>
+				<label>
+					<div>
+						<select id="ampm">
+							<option value="AM">AM</option>
+							<option value="PM">PM</option>
+						</select>
+					</div>
+				</label>
+
+
+		<div id='buttonHolder'>
+			<div>
+				<button  id='setButton' onClick='alarmSet()'>Set Alarm</button> <!-- 알람 설정 버튼-->
+				<br><br>
+			</div>
+
+			<div>
+				<button  id='restButton' onClick='alarmClear()'>Reset Alarm</button>
+				<br>
+				<button id='clearButton' onclick="window.open({% url 'StopAlarm' %});"> Clear Alarm </button>
+			</div>
+		</div>
+
+		<br><br>
+	<div class="ex" align="center">
+		<h3>Set Alarm</h3>
+		 알람 시간을 설정 버튼입니다!
+		<br><br>
+		<h3>Reset Alarm</h3>
+		 알람 시간 설정한 것을 취소 하는 버튼입니다!
+		<br><br>
+		<h3>Clear Alarm</h3>
+		 알람을 중지하려면 이 버튼을 누르세요! <br>새로운 창으로 이동됩니다!
+	</div>
+
+</div>
+
+
+
+		<script src="{% static 'js/clock.js' %}"></script>
+
+	</body>
+</html>
