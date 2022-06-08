@@ -6,7 +6,7 @@
 - **Language** : Python 3.8, HTML5, JavaScript, CSS
 - **Framework** : Django
 - **DBMS** : MySQL
-- **Library** : Python Channels, Web Socket, OpenCV, imutils, dlib
+- **Library** : Python Channels, Web Socket, OpenCV, imutils, dlib, ajax
 
 ## 2. 구성도
 ![image](https://user-images.githubusercontent.com/76837780/168426253-7b58e7f3-1897-465c-9c18-b87ab759e269.png)
